@@ -1,8 +1,10 @@
 version: '3'
 services:
   app:
-    image: gcc:8.2.0
+    image: gcc:9.2.0
+    container_name: gcc_sandbox
+    working_dir: /home/app
     volumes:
-      - ./app:/app
+      - ./app:/home/app
     stdin_open: true
     tty: true
